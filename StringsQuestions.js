@@ -49,30 +49,34 @@ var reverseString = function(s) {
 // question 4  GoodString?   (occurance of each character is same)
 
 
-function goodString(s){
-    
-    let prevOccur=1;
-    //a b c a b c 
-    for(let i=0; i<s.length-1; i++){
-        let currentOccur =1;
-        for(j=i+1; j<s.length; j++){
-             if(s[i] == s[j]){
-                 currentOccur++;
-             }
+
+function goodString(s) {
+    let firstCharOccur = 0;
+    for (let i = 0; i < s.length - 1; i++) {
+        let occur = 0;
+        for (let j = 0; j < s.length; j++) {
+            if (s[i] == s[j]) {
+                occur++;
+            }
         }
-         if(prevOccur==1){
-             console.log("prev occur first: ", prevOccur, currentOccur)
-         prevOccur = currentOccur;
-             console.log("prev occur last: ", prevOccur ,currentOccur)
-         continue;
-         }
-       
-             console.log("prev occur last: ", prevOccur ,currentOccur)
+        if (i == 0) {
+            firstCharOccur = occur;
+            continue;
+        }
+        if (firstCharOccur != occur) {
+            console.log("bad string")
+            return
+        }    
+
+
+
+
     }
- 
- 
+    return console.log("Good String.")
+
 }
 
-goodString("abab")
+
+goodString("sdsdsd")
 
 
