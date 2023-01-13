@@ -102,3 +102,19 @@ var mostWordsFound = function (sentences) {
 };
 
 console.log(mostWordFound(["alice and bob love leetcode","i think so too","this is great thanks very much"]));
+
+
+//Q6: check if 2 string arrays are equivalent
+
+/**
+ * @param {string[]} word1
+ * @param {string[]} word2
+ * @return {boolean}
+ */
+var arrayStringsAreEqual = function (word1, word2) {
+    const strng1 = word1.reduce((acc, cv) => acc + cv, '')
+    const strng2 = word2.reduce((acc, cv) => acc + cv, '')
+
+    return strng1 === strng2;
+
+};
