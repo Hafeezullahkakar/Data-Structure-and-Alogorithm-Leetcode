@@ -104,6 +104,21 @@ var mostWordsFound = function (sentences) {
 console.log(mostWordFound(["alice and bob love leetcode","i think so too","this is great thanks very much"]));
 
 
+//Q6 revers a string 
+
+function reverseString(s){
+    
+    for(i =s.length-1; i>=0; i--){
+        console.log(s[i])
+    }
+    
+    
+}
+
+
+reverseString("Hafeez ullah kakar"
+
+
 //Q6: check if 2 string arrays are equivalent
 
 /**
